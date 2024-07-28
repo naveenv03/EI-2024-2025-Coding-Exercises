@@ -20,4 +20,22 @@ The Mediator Pattern is used to reduce the complexity of communication between m
 - **User.java**: Represents a user in the chat room.
 - **Main.java**: The main class to run the chat room example.
 
+### Use Case 2: State Pattern - Vending Machine
+### Description
+The State Pattern allows an object to change its behavior when its internal state changes. The object will appear to change its class. This example demonstrates a vending machine that behaves differently based on whether a coin has been inserted or not.
+
+### How It Works
+**VendingMachineState.java**: is an interface that defines the methods insertCoin and dispenseItem.
+**NoCoinState.java** and **HasCoinState.java** are concrete implementations of VendingMachineState.
+**NoCoinState:** Represents the state where no coin has been inserted. Only allows coin insertion.
+**HasCoinState:** Represents the state where a coin has been inserted. Allows dispensing of an item and resets to NoCoinState after dispensing.
+**VendingMachine.java** maintains a reference to the current state. It delegates the actions to the current state and changes its state based on the actions performed.
+The main class demonstrates inserting a coin and dispensing an item, showing the state transitions.
+### Implementation
+**VendingMachineState.java**: Interface defining the state-specific behavior.
+**NoCoinState.java:** Class representing the state where no coin has been inserted.
+**HasCoinState.java:** Class representing the state where a coin has been inserted.
+**VendingMachine.java:** The context class that changes its behavior as its state changes.
+**Main.java:** The main class to run the vending machine example.
+
 
